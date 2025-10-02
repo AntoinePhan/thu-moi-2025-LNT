@@ -9,19 +9,24 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <style>
   :root{
-    /* Tông xanh giống banner */
-    --bg:#eaf4ff;
-    --ink:#0b1532;
-    --muted:#6b7280;
-    --brand:#0ea5e9;
-    --brand2:#0a62b5;
-    --ring:#dbeafe;
-    --heroTop:#0a2f83;   /* xanh đậm */
-    --heroBot:#0e47b3;   /* xanh nhạt hơn */
+    /* Tông xanh đậm giống banner */
+    --bg:#0a2f83;         /* xanh cobalt đậm */
+    --ink:#ffffff;        /* chữ trắng để nổi bật */
+    --muted:#dbeafe;      /* chữ phụ xanh nhạt */
+    --brand:#1ea7ff;      /* xanh sáng */
+    --brand2:#9bd2ff;     /* xanh nhạt hơn */
+    --ring:#1ea7ff33;     /* viền nhạt */
+    --heroTop:#0a2f83;    /* xanh đậm */
+    --heroBot:#0e47b3;    /* xanh nhạt hơn */
   }
+
   *{box-sizing:border-box}
   html,body{margin:0}
-  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);background:var(--bg)}
+  body{
+    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+    color:var(--ink);
+    background:linear-gradient(180deg,var(--heroTop) 0%, var(--heroBot) 100%);
+  }
   a{color:var(--brand2);text-decoration:none}
   img{max-width:100%;height:auto}
   .wrap{max-width:1080px;margin:auto;padding:0 18px}
@@ -41,7 +46,6 @@
     position:absolute;inset:0;
     background:
       linear-gradient(180deg, rgba(10,47,131,.85) 0%, rgba(14,71,179,.75) 55%, rgba(255,255,255,.15) 100%),
-      url('assets/banner.jpg') center/cover no-repeat;  /* ĐÚNG đường dẫn GitHub: assets/banner.jpg */
     filter:saturate(1.05);
   }
   .hero .content{position:relative;padding:64px 12px}
@@ -157,7 +161,7 @@
       <div class="hosts" id="hostsList"></div>
     </section>
     <section class="card section banner-sec" data-aos="fade-up">
-      <img src="assets/banner.jpeg" alt="Banner Hội nghị">
+      <img src="assets/banner.jpg" alt="Banner Hội nghị">
     </section>
     <!-- INVITE -->
     <section id="invite" class="card section" data-aos="fade-up">
