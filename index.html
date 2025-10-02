@@ -7,120 +7,109 @@
   <meta name="description" content="Thư mời Hội nghị Khoa học Kỹ thuật lần thứ X – 2025 của Bệnh viện Đa khoa Lê Ngọc Tùng" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    :root{
-      /* tông xanh giống banner */
-      --bg:#eaf4ff;
-      --ink:#0b1532;
-      --muted:#6b7280;
-      --brand:#0ea5e9;
-      --brand2:#0a62b5;
-      --ring:#dbeafe;
-      --heroTop:#0a2f83;   /* xanh đậm */
-      --heroBot:#0e47b3;   /* xanh nhạt hơn */
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);background:var(--bg)}
-    a{color:var(--brand2);text-decoration:none}
-    img{max-width:100%;height:auto}
-    .wrap{max-width:1080px;margin:auto;padding:0 18px}
+<style>
+  :root{
+    /* Tông xanh giống banner */
+    --bg:#eaf4ff;
+    --ink:#0b1532;
+    --muted:#6b7280;
+    --brand:#0ea5e9;
+    --brand2:#0a62b5;
+    --ring:#dbeafe;
+    --heroTop:#0a2f83;   /* xanh đậm */
+    --heroBot:#0e47b3;   /* xanh nhạt hơn */
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);background:var(--bg)}
+  a{color:var(--brand2);text-decoration:none}
+  img{max-width:100%;height:auto}
+  .wrap{max-width:1080px;margin:auto;padding:0 18px}
 
-    /* ===== Top Nav (mobile-safe) ===== */
-    nav.top{position:sticky;top:0;z-index:40;backdrop-filter:saturate(1.2) blur(6px);background:rgba(255,255,255,.92);border-bottom:1px solid #e5e7eb}
-    nav .inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
-    .brand{display:flex;align-items:center;gap:10px}
-    .brand img{height:34px}
-    .brand b{color:var(--brand2);white-space:nowrap}
+  /* ===== Top Nav — chỉ giữ logo, bỏ menu ===== */
+  nav.top{position:sticky;top:0;z-index:40;backdrop-filter:saturate(1.2) blur(6px);background:rgba(255,255,255,.92);border-bottom:1px solid #e5e7eb}
+  nav .inner{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0} /* logo giữa */
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand img{height:34px}
+  .brand b{color:var(--brand2);white-space:nowrap}
+  /* Ẩn hoàn toàn navlinks nếu vẫn còn trong HTML */
+  .navlinks,.menuBtn{display:none !important;}
 
-    .navlinks{display:flex;gap:12px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
-    .navlinks::-webkit-scrollbar{display:none}
-    .navlinks a{padding:8px 10px;border-radius:10px;display:inline-block}
-    .navlinks a:hover{background:#eaf5ff}
+  /* ===== Hero (banner + overlay xanh) ===== */
+  header.hero{position:relative;display:grid;align-items:center;justify-items:center;text-align:center;min-height:68vh;border-radius:0 0 26px 26px;overflow:hidden}
+  .hero .bg{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(180deg, rgba(10,47,131,.85) 0%, rgba(14,71,179,.75) 55%, rgba(255,255,255,.15) 100%),
+      url('assets/banner.jpg') center/cover no-repeat;  /* ĐÚNG đường dẫn GitHub: assets/banner.jpg */
+    filter:saturate(1.05);
+  }
+  .hero .content{position:relative;padding:64px 12px}
+  .eyebrow{letter-spacing:.2em;font-size:12px;color:#9bd2ff;font-weight:700}
+  h1.title{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(28px,6.5vw,48px);
+    line-height:1.12;
+    color:#fff;
+    margin:8px 0 6px;
+    text-shadow:0 2px 18px rgba(0,0,0,.25);
+  }
+  p.subtitle{color:#e6f2ff;margin:0}
+  .cta{display:flex;gap:12px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+  .btn{padding:10px 14px;border-radius:12px;border:1px solid var(--ring);background:#fff;cursor:pointer;font-weight:600}
+  .btn.primary{background:#1ea7ff;color:#fff;border-color:#1ea7ff}
 
-    /* very-narrow: show a Menu button to toggle links */
-    .menuBtn{display:none;border:1px solid var(--ring);background:#fff;border-radius:10px;padding:7px 10px;cursor:pointer}
-    @media (max-width:480px){
-      .navlinks{display:none}
-      .menuBtn{display:inline-block}
-      .navlinks.open{display:flex}
-    }
+  /* ===== Sections & Cards ===== */
+  section{scroll-margin-top:74px;margin:30px 0}
+  .card{background:#fff;border:1px solid var(--ring);border-radius:18px;box-shadow:0 18px 45px -25px rgba(2,132,199,.35)}
+  .section{padding:22px}
+  h2{font-family:"Playfair Display",serif;color:var(--brand2);margin:0 0 12px;font-size:28px}
+  p.muted{color:var(--muted)}
 
-    /* ===== Hero (dùng banner + overlay xanh) ===== */
-    header.hero{position:relative;display:grid;align-items:center;justify-items:center;text-align:center;min-height:68vh;border-radius:0 0 26px 26px;overflow:hidden}
-    .hero .bg{
-      position:absolute;inset:0;
-      background:
-        linear-gradient(180deg, rgba(10,47,131,.85) 0%, rgba(14,71,179,.75) 55%, rgba(255,255,255,.15) 100%),
-        url('assets/banner.jpg') center/cover no-repeat;
-      filter:saturate(1.05);
-    }
-    .hero .content{position:relative;padding:64px 12px}
-    .eyebrow{letter-spacing:.2em;font-size:12px;color:#9bd2ff;font-weight:700}
-    h1.title{
-      font-family:"Playfair Display",serif;
-      font-size:clamp(28px,6.5vw,48px);
-      line-height:1.12;
-      color:#fff;
-      margin:8px 0 6px;
-      text-shadow:0 2px 18px rgba(0,0,0,.25);
-    }
-    p.subtitle{color:#e6f2ff;margin:0}
-    .cta{display:flex;gap:12px;justify-content:center;margin-top:18px;flex-wrap:wrap}
-    .btn{padding:10px 14px;border-radius:12px;border:1px solid var(--ring);background:#fff;cursor:pointer;font-weight:600}
-    .btn.primary{background:#1ea7ff;color:#fff;border-color:#1ea7ff}
+  /* ===== Hosts (giữ 3-2) ===== */
+  .hosts{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+  .host{flex:1 1 220px;max-width:260px;display:grid;justify-items:center;text-align:center;padding:14px}
+  @media(min-width:860px){.host{flex:0 0 calc(33.333% - 14px)}}
+  .host img{width:128px;height:128px;border-radius:50%;object-fit:cover;border:3px solid #e2efff}
+  .host b{margin-top:8px}
+  .host small{color:var(--muted)}
 
-    /* ===== Sections & Cards ===== */
-    section{scroll-margin-top:74px;margin:30px 0}
-    .card{background:#fff;border:1px solid var(--ring);border-radius:18px;box-shadow:0 18px 45px -25px rgba(2,132,199,.35)}
-    .section{padding:22px}
-    h2{font-family:"Playfair Display",serif;color:var(--brand2);margin:0 0 12px;font-size:28px}
-    p.muted{color:var(--muted)}
+  /* ===== Invite ===== */
+  .invite{display:grid;gap:10px}
+  .invbox{border:1px dashed var(--ring);border-radius:16px;padding:14px}
+  .tag{display:inline-block;padding:6px 10px;background:#eef6ff;border:1px solid var(--ring);border-radius:999px;color:var(--brand2);font-weight:700;letter-spacing:.04em;font-size:12px}
+  .datebig{font-size:22px;font-weight:700;color:#0f172a}
 
-    /* ===== Hosts (giữ 3-2) ===== */
-    .hosts{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
-    .host{flex:1 1 220px;max-width:260px;display:grid;justify-items:center;text-align:center;padding:14px}
-    @media(min-width:860px){.host{flex:0 0 calc(33.333% - 14px)}}
-    .host img{width:128px;height:128px;border-radius:50%;object-fit:cover;border:3px solid #e2efff}
-    .host b{margin-top:8px}
-    .host small{color:var(--muted)}
+  /* ===== Agenda & Speakers (ảnh TRÒN TO 120px) ===== */
+  .agendaGrid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:860px){.agendaGrid{grid-template-columns:1.2fr .8fr}}
+  .agendaImg{width:100%;border-radius:14px;border:1px solid var(--ring)}
+  .speakers{display:grid;grid-template-columns:1fr;gap:14px}
+  @media(min-width:560px){.speakers{grid-template-columns:repeat(2,1fr)}}
+  .spk{display:flex;gap:14px;align-items:center;padding:8px 6px}
+  .spk img{
+    width:120px;height:120px;border-radius:50%;
+    object-fit:cover;border:3px solid #e2efff;
+    box-shadow:0 8px 20px -12px rgba(2,132,199,.35);
+    background:#fff;
+  }
 
-    /* ===== Invite ===== */
-    .invite{display:grid;gap:10px}
-    .invbox{border:1px dashed var(--ring);border-radius:16px;padding:14px}
-    .tag{display:inline-block;padding:6px 10px;background:#eef6ff;border:1px solid var(--ring);border-radius:999px;color:var(--brand2);font-weight:700;letter-spacing:.04em;font-size:12px}
-    .datebig{font-size:22px;font-weight:700;color:#0f172a}
+  /* ===== Gallery ===== */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  @media(min-width:860px){.grid{grid-template-columns:repeat(5,1fr)}}
+  .grid img{width:100%;height:140px;object-fit:cover;border-radius:10px;cursor:pointer;border:1px solid var(--ring);transition:transform .25s}
+  .grid img:hover{transform:scale(1.04)}
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:60}
+  .lightbox img{max-width:92vw;max-height:86vh;border-radius:12px}
 
-    /* ===== Agenda & Speakers (ảnh tròn, to hơn) ===== */
-    .agendaGrid{display:grid;grid-template-columns:1fr;gap:16px}
-    @media(min-width:860px){.agendaGrid{grid-template-columns:1.2fr .8fr}}
-    .agendaImg{width:100%;border-radius:14px;border:1px solid var(--ring)}
-    .speakers{display:grid;grid-template-columns:1fr;gap:14px}
-    @media(min-width:560px){.speakers{grid-template-columns:repeat(2,1fr)}}
-    .spk{display:flex;gap:14px;align-items:center;padding:8px 6px}
-    .spk img{
-      width:92px;height:92px;border-radius:50%;
-      object-fit:cover;border:3px solid #e2efff;
-      box-shadow:0 8px 20px -12px rgba(2,132,199,.35);
-      background:#fff;
-    }
+  /* ===== Map ===== */
+  .mapwrap{position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;border:1px solid var(--ring)}
+  .mapwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
-    /* ===== Gallery ===== */
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-    @media(min-width:860px){.grid{grid-template-columns:repeat(5,1fr)}}
-    .grid img{width:100%;height:140px;object-fit:cover;border-radius:10px;cursor:pointer;border:1px solid var(--ring);transition:transform .25s}
-    .grid img:hover{transform:scale(1.04)}
-    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:60}
-    .lightbox img{max-width:92vw;max-height:86vh;border-radius:12px}
-
-    /* ===== Map ===== */
-    .mapwrap{position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;border:1px solid var(--ring)}
-    .mapwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-
-    /* ===== Music Button ===== */
-    .music{position:fixed;right:16px;bottom:16px;z-index:70}
-    .music button{border:none;border-radius:999px;padding:12px 14px;background:#1ea7ff;color:#fff;font-weight:700;box-shadow:0 10px 24px -12px rgba(14,165,233,.45);cursor:pointer}
-  </style>
+  /* ===== Music Button ===== */
+  .music{position:fixed;right:16px;bottom:16px;z-index:70}
+  .music button{border:none;border-radius:999px;padding:12px 14px;background:#1ea7ff;color:#fff;font-weight:700;box-shadow:0 10px 24px -12px rgba(14,165,233,.45);cursor:pointer}
+</style>
 </head>
 <body>
   <!-- Music control -->
@@ -167,7 +156,9 @@
       <p class="muted">Các bác sĩ tham gia điều hành chương trình</p>
       <div class="hosts" id="hostsList"></div>
     </section>
-
+    <section class="card section banner-sec" data-aos="fade-up">
+      <img src="assets/banner.jpeg" alt="Banner Hội nghị">
+    </section>
     <!-- INVITE -->
     <section id="invite" class="card section" data-aos="fade-up">
       <h2>Trân trọng kính mời</h2>
