@@ -79,19 +79,42 @@
   .tag{display:inline-block;padding:6px 10px;background:#eef6ff;border:1px solid var(--ring);border-radius:999px;color:var(--brand2);font-weight:700;letter-spacing:.04em;font-size:12px}
   .datebig{font-size:22px;font-weight:700;color:#0f172a}
 
-  /* ===== Agenda & Speakers (ảnh TRÒN TO 120px) ===== */
-  .agendaGrid{display:grid;grid-template-columns:1fr;gap:16px}
-  @media(min-width:860px){.agendaGrid{grid-template-columns:1.2fr .8fr}}
-  .agendaImg{width:100%;border-radius:14px;border:1px solid var(--ring)}
-  .speakers{display:grid;grid-template-columns:1fr;gap:14px}
-  @media(min-width:560px){.speakers{grid-template-columns:repeat(2,1fr)}}
-  .spk{display:flex;gap:14px;align-items:center;padding:8px 6px}
-  .spk img{
-    width:350px;height:350px;border-radius:50%;
-    object-fit:cover;border:3px solid #e2efff;
-    box-shadow:0 8px 20px -12px rgba(2,132,199,.35);
-    background:#fff;
-  }
+  /* ===== Agenda & Speakers (ảnh TRÒN TO) ===== */
+.agendaGrid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:860px){.agendaGrid{grid-template-columns:1.2fr .8fr}}
+.agendaImg{width:100%;border-radius:14px;border:1px solid var(--ring)}
+
+.speakers{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:560px){.speakers{grid-template-columns:repeat(2,1fr)}}
+
+.spk{
+  display:flex;
+  flex-direction:column;   /* xếp ảnh trên, text dưới */
+  align-items:center;
+  text-align:center;
+  padding:18px 10px;
+}
+
+.spk img{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #e2efff;
+  box-shadow:0 8px 20px -12px rgba(2,132,199,.35);
+  background:#fff;
+  margin-bottom:12px;
+}
+
+.spk b{
+  font-size:18px;
+  color:var(--ink);
+}
+
+.spk small{
+  color:var(--muted);
+  font-size:15px;
+}
 
   /* ===== Gallery ===== */
   .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
