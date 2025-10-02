@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thư mời | Hội nghị KHKT lần X – 2025 | BVĐK Lê Ngọc Tùng</title>
+  <meta name="description" content="Thư mời Hội nghị Khoa học Kỹ thuật lần thứ X – 2025 của Bệnh viện Đa khoa Lê Ngọc Tùng" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root{--bg:#f6fbff;--ink:#0f172a;--muted:#6b7280;--brand:#0ea5e9;--brand2:#0369a1;--ring:#dbeafe}
+    *{box-sizing:border-box}html,body{margin:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);background:var(--bg)}
+    a{color:var(--brand2);text-decoration:none}
+    img{max-width:100%;height:auto}
+    .wrap{max-width:1080px;margin:auto;padding:0 18px}
+    /* Nav */
+    nav.top{position:sticky;top:0;z-index:40;backdrop-filter:saturate(1.2) blur(6px);background:rgba(255,255,255,.85);border-bottom:1px solid #e5e7eb}
+    nav .inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px}.brand img{height:36px}.brand b{color:var(--brand2)}
+    .navlinks{display:flex;gap:12px;flex-wrap:wrap}.navlinks a{padding:8px 10px;border-radius:10px}.navlinks a:hover{background:#eaf5ff}
+    /* Hero */
+    header.hero{position:relative;display:grid;align-items:center;justify-items:center;text-align:center;min-height:68vh;border-radius:0 0 26px 26px;overflow:hidden}
+    .hero .bg{position:absolute;inset:0;background:linear-gradient(180deg,#eaf6ff 0%,#ffffff 70%),url('assets/banner.jpg') center/cover no-repeat;filter:saturate(1.05)}
+    .hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.2),rgba(255,255,255,.88))}
+    .hero .content{position:relative;padding:64px 12px}
+    .eyebrow{letter-spacing:.2em;font-size:12px;color:#0ea5e9;font-weight:700}
+    h1.title{font-family:"Playfair Display",serif;font-size:42px;line-height:1.15;color:#0f172a;margin:8px 0 6px}
+    p.subtitle{color:var(--muted);margin:0}
+    .cta{display:flex;gap:12px;justify-content:center;margin-top:18px}
+    .btn{padding:10px 14px;border-radius:12px;border:1px solid var(--ring);background:#fff;cursor:pointer;font-weight:600}
+    .btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+    /* Section */
+    section{scroll-margin-top:74px;margin:30px 0}
+    .card{background:#fff;border:1px solid var(--ring);border-radius:18px;box-shadow:0 18px 45px -25px rgba(2,132,199,.35)}
+    .section{padding:22px}
+    h2{font-family:"Playfair Display",serif;color:var(--brand2);margin:0 0 12px;font-size:28px}
+    p.muted{color:var(--muted)}
+    /* Hosts 3-2 centered */
+    .hosts{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+    .host{flex:1 1 220px;max-width:260px;display:grid;justify-items:center;text-align:center;padding:14px}
+    @media(min-width:860px){.host{flex:0 0 calc(33.333% - 14px)}}
+    .host img{width:128px;height:128px;border-radius:50%;object-fit:cover;border:3px solid #e2efff}
+    .host b{margin-top:8px}.host small{color:var(--muted)}
+    /* Invite */
+    .invite{display:grid;gap:10px}
+    .invbox{border:1px dashed var(--ring);border-radius:16px;padding:14px}
+    .tag{display:inline-block;padding:6px 10px;background:#eef6ff;border:1px solid var(--ring);border-radius:999px;color:var(--brand2);font-weight:700;letter-spacing:.04em;font-size:12px}
+    .datebig{font-size:22px;font-weight:700;color:#0f172a}
+    /* Agenda */
+    .agendaGrid{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:860px){.agendaGrid{grid-template-columns:1.2fr .8fr}}
+    .agendaImg{width:100%;border-radius:14px;border:1px solid var(--ring)}
+    .speakers{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .spk{display:flex;gap:10px;align-items:center}
+    .spk img{width:56px;height:56px;border-radius:12px;object-fit:cover;border:2px solid #e2efff}
+    /* Gallery */
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    @media(min-width:860px){.grid{grid-template-columns:repeat(5,1fr)}}
+    .grid img{width:100%;height:140px;object-fit:cover;border-radius:10px;cursor:pointer;border:1px solid var(--ring);transition:transform .25s}
+    .grid img:hover{transform:scale(1.04)}
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:60}
+    .lightbox img{max-width:92vw;max-height:86vh;border-radius:12px}
+    /* Map */
+    .mapwrap{position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;border:1px solid var(--ring)}
+    .mapwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    /* Music */
+    .music{position:fixed;right:16px;bottom:16px;z-index:70}
+    .music button{border:none;border-radius:999px;padding:12px 14px;background:var(--brand);color:#fff;font-weight:700;box-shadow:0 10px 24px -12px rgba(14,165,233,.45);cursor:pointer}
+  </style>
+</head>
+<body>
+  <!-- Music control -->
+  <div class="music"><button id="musicBtn" aria-label="Phát / tắt nhạc">♫</button></div>
+  <audio id="bgm" src="assets/music.mp3" preload="auto" loop playsinline></audio>
+
+  <!-- NAV -->
+  <nav class="top">
+    <div class="wrap inner">
+      <div class="brand">
+        <img src="assets/logo_bv.png" alt="BV Lê Ngọc Tùng"><b>Hội nghị KHKT lần X – 2025</b>
+      </div>
+      <div class="navlinks">
+        <a href="#hosts">Chủ toạ đoàn</a>
+        <a href="#invite">Thư mời</a>
+        <a href="#agenda">Chương trình</a>
+        <a href="#gallery">Album</a>
+        <a href="#map">Bản đồ</a>
+        <a href="#thanks">Cảm ơn</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="bg" aria-hidden="true"></div>
+    <div class="shade" aria-hidden="true"></div>
+    <div class="content wrap" data-aos="fade-up">
+      <div class="eyebrow">BỆNH VIỆN ĐA KHOA LÊ NGỌC TÙNG</div>
+      <h1 class="title">Hội nghị Khoa học Kỹ thuật<br> lần thứ X – 2025</h1>
+      <p class="subtitle" id="heroDate"></p>
+      <div class="cta">
+        <a class="btn primary" id="addCal" target="_blank" rel="noopener">Lưu ngày (Google Calendar)</a>
+        <a class="btn" href="#invite">Xem thư mời</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HOSTS -->
+    <section id="hosts" class="card section" data-aos="fade-up">
+      <h2>Chủ toạ đoàn</h2>
+      <p class="muted">Các bác sĩ tham gia điều hành chương trình</p>
+      <div class="hosts" id="hostsList"></div>
+    </section>
+
+    <!-- INVITE -->
+    <section id="invite" class="card section" data-aos="fade-up">
+      <h2>Trân trọng kính mời</h2>
+      <div class="invite">
+        <div class="invbox">
+          <span class="tag">Thời gian</span>
+          <div class="datebig" id="whenText"></div>
+          <p class="muted">Kính mời quý đại biểu có mặt trước giờ khai mạc 15 phút.</p>
+        </div>
+        <div class="invbox">
+          <span class="tag">Địa điểm</span>
+          <div id="whereText"></div>
+          <p class="muted" id="addrText"></p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+            <a class="btn" href="#map">Xem bản đồ</a>
+            <a class="btn" id="openMaps" target="_blank" rel="noopener">Mở Google Maps</a>
+            <a class="btn" id="copyAddr">Copy địa chỉ</a>
+          </div>
+        </div>
+        <div class="invbox">
+          <span class="tag">Quét mã tham dự trực tuyến</span>
+          <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+            <img src="assets/qr.png" alt="QR Tham dự" style="width:160px;border-radius:12px;border:1px solid var(--ring)">
+            <div>
+              <p class="muted">Quét mã để tham dự trực tuyến qua link trong thư mời.</p>
+              <a class="btn" id="openRSVP" target="_blank" rel="noopener">Mở link tham dự</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDA -->
+    <section id="agenda" class="card section" data-aos="fade-up">
+      <h2>Chương trình sự kiện</h2>
+      <div class="agendaGrid">
+        <div>
+          <img class="agendaImg" src="assets/agenda.png" alt="Agenda chương trình">
+        </div>
+        <div>
+          <div class="speakers" id="speakersList"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="card section" data-aos="fade-up">
+      <h2>Ghi dấu một hành trình 10 năm</h2>
+      <div class="grid" id="galleryGrid"></div>
+      <div class="lightbox" id="lightbox" aria-hidden="true"><img id="lightImg" alt="preview"></div>
+    </section>
+
+    <!-- MAP -->
+    <section id="map" class="card section" data-aos="fade-up">
+      <h2>Vị trí tổ chức</h2>
+      <div class="mapwrap">
+        <iframe allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.812807707449!2d106.10582923873497!3d11.324010288906372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310b6bb78d2e4ce1%3A0x9a7929e3ee2b7bbb!2zUEjDkk5HIEtIw4FNIMSQQSBLSE9BIELDgUMgU8SoIEdJQSDEkMOMTkg!5e1!3m2!1svi!2s!4v1759389021186!5m2!1svi!2s"></iframe>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+        <a class="btn" id="openMaps2" target="_blank" rel="noopener">Mở Google Maps</a>
+        <a class="btn" id="copyMapUrl">Copy link bản đồ</a>
+      </div>
+    </section>
+
+    <!-- THANKS -->
+    <section id="thanks" class="card section" data-aos="fade-up">
+      <h2>Cảm ơn sự đồng hành</h2>
+      <p>Cảm ơn sự đồng hành, theo dõi một chặng đường của Bệnh viện Lê Ngọc Tùng. Ban Tổ chức trân trọng kính mời Quý vị tham dự Hội nghị Khoa học Kỹ thuật lần thứ X – 2025 để cùng nhìn lại và chia sẻ những thành tựu trong suốt 10 năm qua.</p>
+    </section>
+  </main>
+
+  <footer class="wrap"><p class="muted">© 2025 – Bệnh viện Đa khoa Lê Ngọc Tùng • Microsite thư mời sự kiện.</p></footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    const CFG={
+      title:"Hội nghị Khoa học Kỹ thuật lần thứ X – 2025",
+      start:"2025-10-10T14:00:00",end:"2025-10-10T17:00:00",
+      placeShort:"Tây Ninh",placeFull:"Phòng khám Đa khoa Gia Đình",
+      address:"94 Nguyễn Văn Bạch, KP5, P. Tân Ninh, Tây Ninh",
+      mapsUrl:"https://maps.google.com/?q=94%20Nguyen%20Van%20Bach%2C%20Tan%20Ninh%2C%20Tay%20Ninh",
+      rsvpUrl:"https://meet.google.com/bgh-xhxu-xku",
+
+      /* Ảnh host/speaker đặt trong assets/host1.jpg ... spk1.jpg ... */
+      hosts:[
+        {name:"BS.CKI. Trần Minh Trường",role:"CT HĐKH BV LNT – Trưởng BTC",img:"assets/host1.jpg"},
+        {name:"ThS.BS. Nguyễn Vũ Thắng",role:"HĐKH BV LNT – Phó BTC",img:"assets/host2.jpg"},
+        {name:"PGS.TS.DS. Trương Văn Tuấn",role:"PCT TT Hội Dược học – CT Hội Dược sĩ BV TP.HCM",img:"assets/host3.jpg"},
+        {name:"DS. Nguyễn Thị Kim Anh",role:"PCT Hội Dược học – CT Hội Dược sĩ Nhà thuốc TP.HCM",img:"assets/host4.jpg"},
+        {name:"BS.CKII. Lê Cao Thái",role:"Phó Giám đốc BV Bà Rịa",img:"assets/host5.jpg"}
+      ],
+      speakers:[
+        {name:"BS.CKI. Phan Đức Duy",org:"Phó khoa Nội Tổng quát – BV LNT",img:"assets/spk1.jpg"},
+        {name:"BS.CKII. Nguyễn Bá Hỷ",org:"Trưởng khoa Lọc máu – BV Bà Rịa",img:"assets/spk2.jpg"},
+        {name:"CKI. ĐD. Đỗ Ngọc Anh",org:"Trưởng phòng Điều dưỡng – BV Bà Rịa",img:"assets/spk3.jpg"},
+        {name:"TS.BS. Trần Minh Triết",org:"Phó khoa Khám – BV ĐH Y Dược TP.HCM",img:"assets/spk4.jpg"},
+        {name:"DS.CKI. Nguyễn Minh Triết",org:"Trưởng khoa Dược – BV LNT",img:"assets/spk5.jpg"}
+      ],
+
+      /* Album 10 ảnh: đặt y1.jpg ... y10.jpg trong assets/ */
+      gallery:[
+        "assets/y1.jpg","assets/y2.jpg","assets/y3.jpg","assets/y4.jpg","assets/y5.jpg",
+        "assets/y6.jpg","assets/y7.jpg","assets/y8.jpg","assets/y9.jpg","assets/y10.jpg"
+      ]
+    };
+
+    AOS.init({once:true,duration:700,easing:'ease-out-quart'});
+
+    // Music control
+    const audio=document.getElementById('bgm'); const btn=document.getElementById('musicBtn'); let playing=false;
+    btn.addEventListener('click',async()=>{try{if(!playing){await audio.play();playing=true;btn.textContent='❚❚'}else{audio.pause();playing=false;btn.textContent='♫'}}catch(e){alert('Không phát được nhạc: '+e.message)}});
+
+    // Dates & texts
+    const pad2=n=>String(n).padStart(2,'0');
+    const toCalDT=d=>`${d.getUTCFullYear()}${pad2(d.getUTCMonth()+1)}${pad2(d.getUTCDate())}T${pad2(d.getUTCHours())}${pad2(d.getUTCMinutes())}${pad2(d.getUTCSeconds())}Z`;
+    const dtS=new Date(CFG.start), dtE=new Date(CFG.end);
+    const dateHuman=dtS.toLocaleDateString('vi-VN',{weekday:'long',day:'2-digit',month:'2-digit',year:'numeric'});
+    const tS=dtS.toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'});
+    const tE=dtE.toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'});
+    document.getElementById('heroDate').textContent=`${dateHuman} • ${tS} – ${CFG.placeShort}`;
+    document.getElementById('whenText').textContent=`${dateHuman} – ${tS} đến ${tE}`;
+    document.getElementById('whereText').innerHTML=`<b>${CFG.placeFull}</b>`;
+    document.getElementById('addrText').textContent=CFG.address;
+
+    // Links
+    document.getElementById('openMaps').href=CFG.mapsUrl;
+    document.getElementById('openMaps2').href=CFG.mapsUrl;
+    document.getElementById('openRSVP').href=CFG.rsvpUrl;
+
+    // Calendar
+    const calTitle=encodeURIComponent(CFG.title);
+    const calLoc=encodeURIComponent(`${CFG.placeFull} - ${CFG.address}`);
+    const calDates=`${toCalDT(dtS)}/${toCalDT(dtE)}`;
+    document.getElementById('addCal').href=`https://www.google.com/calendar/render?action=TEMPLATE&text=${calTitle}&dates=${calDates}&location=${calLoc}&details=${encodeURIComponent('Thư mời tham dự hội nghị khoa học kỹ thuật lần thứ X – 2025')}`;
+
+    // Copy helpers
+    document.getElementById('copyAddr').onclick=()=>navigator.clipboard.writeText(`${CFG.placeFull} - ${CFG.address}`).then(()=>alert('Đã copy địa chỉ!'));
+    document.getElementById('copyMapUrl').onclick=()=>navigator.clipboard.writeText(CFG.mapsUrl).then(()=>alert('Đã copy link bản đồ!'));
+
+    // Render hosts
+    const hostsWrap=document.getElementById('hostsList');
+    CFG.hosts.forEach((h,i)=>{const el=document.createElement('div');el.className='host';el.setAttribute('data-aos','zoom-in');el.setAttribute('data-aos-delay',String((i%3)*80));el.innerHTML=`<img src="${h.img}" alt="${h.name}"><b>${h.name}</b><small>${h.role}</small>`;hostsWrap.appendChild(el);});
+
+    // Speakers
+    const spList=document.getElementById('speakersList');
+    CFG.speakers.forEach((s,i)=>{const el=document.createElement('div');el.className='spk';el.setAttribute('data-aos','fade-left');el.setAttribute('data-aos-delay',String(i*80));el.innerHTML=`<img src="${s.img}" alt="${s.name}"><div><b>${s.name}</b><div class="muted">${s.org}</div></div>`;spList.appendChild(el);});
+
+    // Gallery + Lightbox
+    const gal=document.getElementById('galleryGrid'); const lb=document.getElementById('lightbox'); const lbImg=document.getElementById('lightImg');
+    CFG.gallery.forEach((src,i)=>{const img=document.createElement('img');img.src=src;img.alt='Album hội nghị';img.setAttribute('data-aos','zoom-in');img.setAttribute('data-aos-delay',String((i%5)*60));img.addEventListener('click',()=>{lb.style.display='flex';lbImg.src=src;lb.setAttribute('aria-hidden','false')});gal.appendChild(img)});
+    lb.addEventListener('click',()=>{lb.style.display='none';lb.setAttribute('aria-hidden','true')});
+  </script>
+</body>
+</html>
