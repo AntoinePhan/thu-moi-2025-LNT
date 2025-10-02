@@ -10,7 +10,7 @@
 <style>
   :root{
     /* Tông xanh giống banner */
-    --bg:#0a2f83;   /* thay màu nền nhạt bằng xanh đậm */
+    --bg:#0a2f83;
     --ink:#0b1532;
     --muted:#6b7280;
     --brand:#0ea5e9;
@@ -21,15 +21,11 @@
   }
   *{box-sizing:border-box}
   html,body{margin:0}
-  body{
-    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-    color:var(--ink);
-    background:var(--bg); /* màu nền được thay */
-  }
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);background:var(--bg)}
   a{color:var(--brand2);text-decoration:none}
   img{max-width:100%;height:auto}
   .wrap{max-width:1080px;margin:auto;padding:0 18px}
-  
+
   /* ===== Top Nav — chỉ giữ logo, bỏ menu ===== */
   nav.top{position:sticky;top:0;z-index:40;backdrop-filter:saturate(1.2) blur(6px);background:rgba(255,255,255,.92);border-bottom:1px solid #e5e7eb}
   nav .inner{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0} /* logo giữa */
@@ -91,7 +87,7 @@
   @media(min-width:560px){.speakers{grid-template-columns:repeat(2,1fr)}}
   .spk{display:flex;gap:14px;align-items:center;padding:8px 6px}
   .spk img{
-    width:120px;height:120px;border-radius:50%;
+    width:350px;height:350px;border-radius:50%;
     object-fit:cover;border:3px solid #e2efff;
     box-shadow:0 8px 20px -12px rgba(2,132,199,.35);
     background:#fff;
